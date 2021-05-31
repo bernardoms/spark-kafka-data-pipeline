@@ -1,0 +1,49 @@
+[{
+  "event-type" : "init",
+  "time": 1622474072,
+  "user-id" : "1",
+  "country" : "Brazil",
+  "platform" : "Ios"
+},{
+    "event-type" : "init",
+    "time": 1622474072,
+    "user-id" : "1",
+    "country" : "Brazil",
+    "platform" : "Ios"
+},{
+  "event-type" : "init",
+  "time": 1622393324,
+  "user-id" : "1",
+  "country" : "Brazil",
+  "platform" : "Ios"
+},{
+  "event-type" : "init",
+  "time": 1622393324,
+  "user-id" : "2",
+  "country" : "Brazil",
+  "platform" : "Android"
+},{
+  "event-type" : "init",
+  "time": 1622474072,
+  "user-id" : "2",
+  "country" : "Brazil",
+  "platform" : "Desktop"
+},{
+  "event-type" : "init",
+  "time": 1622474072,
+  "user-id" : "3",
+  "country" : "Brazil",
+  "platform" : "Ios"
+},{
+  "event-type" : "init",
+  "time": 1622474072,
+  "user-id" : "4",
+  "country" : "Brazil",
+  "platform" : "Ios"
+},{
+  "event-type" : "init",
+  "time": 1622474072,
+  "user-id" : "5",
+  "country" : "Brazil",
+  "platform" : "Android"
+}]

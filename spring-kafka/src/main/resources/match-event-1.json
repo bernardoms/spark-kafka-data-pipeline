@@ -1,0 +1,21 @@
+{
+  "event-type" : "match",
+  "time" : 1622472676,
+  "user-a" : "1",
+  "user-b" : "2",
+  "user-a-postmatch-info" : {
+    "coin-balance-after-match" : 100,
+    "level-after-match" : 2,
+    "device" : "Iphone 12",
+    "platform" : "Ios 13"
+  },
+  "user-b-postmatch-info" : {
+    "coin-balance-after-match" : 300,
+    "level-after-match" : 5,
+    "device" : "Galaxy S20",
+    "platform" : "Android 11"
+  },
+  "winner" : "1",
+  "game-tie" : "3",
+  "duration" : 360
+}

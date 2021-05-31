@@ -1,0 +1,7 @@
+[{
+  "event-type" : "in-app-purchase",
+  "time" : 1622472676,
+  "purchase_value" : 20,
+  "user-id" : "1",
+  "product-id" : "1234"
+}]
