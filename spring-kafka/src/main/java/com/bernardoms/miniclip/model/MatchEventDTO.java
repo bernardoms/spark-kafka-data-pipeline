@@ -6,11 +6,16 @@ public class MatchEventDTO {
   @JsonProperty("event-type")
   private String eventType;
   private int time;
+  @JsonProperty("user-a")
   private String userA;
+  @JsonProperty("user-b")
   private String userB;
+  @JsonProperty("user-a-postmatch-info")
   private User UserAPostmanInfo;
+  @JsonProperty("user-b-postmatch-info")
   private User UserBPostmanInfo;
   private String winner;
+  @JsonProperty("game-tie")
   private String gameTie;
   private int duration;
 

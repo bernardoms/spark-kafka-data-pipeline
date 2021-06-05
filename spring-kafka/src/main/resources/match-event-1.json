@@ -1,4 +1,4 @@
-{
+[{
   "event-type" : "match",
   "time" : 1622472676,
   "user-a" : "1",
@@ -18,4 +18,4 @@
   "winner" : "1",
   "game-tie" : "3",
   "duration" : 360
-}
+}]

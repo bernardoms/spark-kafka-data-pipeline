@@ -12,8 +12,4 @@ public class KafkaProducerConfig {
   public String getProducerTopic() {
     return producerTopic;
   }
-
-  public void setProducerTopic(String producerTopic) {
-    this.producerTopic = producerTopic;
-  }
 }

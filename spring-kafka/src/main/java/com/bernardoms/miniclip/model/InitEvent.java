@@ -28,6 +28,7 @@ public class InitEvent {
   public void setTime(LocalDate time) {
     this.time = time;
   }
+
   public void setTime(long time) {
     this.time = Instant.ofEpochSecond(time).atZone(ZoneId.systemDefault()).toLocalDate();
   }

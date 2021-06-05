@@ -1,11 +1,14 @@
 package com.bernardoms.miniclip.model;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "in-app-purchase-event")
 public class InAppPurchaseEvent {
   private String eventType;
-  private int time;
+  private LocalDate time;
   private int purchaseValue;
   private String userId;
   private String productId;
@@ -18,12 +21,16 @@ public class InAppPurchaseEvent {
     this.eventType = eventType;
   }
 
-  public int getTime() {
+  public LocalDate getTime() {
     return time;
   }
 
-  public void setTime(int time) {
+  public void setTime(LocalDate time) {
     this.time = time;
+  }
+
+  public void setTime(long time) {
+    this.time = Instant.ofEpochSecond(time).atZone(ZoneId.systemDefault()).toLocalDate();
   }
 
   public int getPurchaseValue() {

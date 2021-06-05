@@ -1,7 +1,11 @@
 package com.bernardoms.miniclip.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
+  @JsonProperty("coin-balance-after-match")
   private int coinBalanceAfterMatch;
+  @JsonProperty("level-after-match")
   private int levelAfterMatch;
   private String device;
   private String platform;

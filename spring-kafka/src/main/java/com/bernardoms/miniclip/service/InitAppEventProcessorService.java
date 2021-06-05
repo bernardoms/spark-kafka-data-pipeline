@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 @Service
-public class InitAppEventProcessorService implements EventProcessor<InitEventDTO> {
+public class InitAppEventProcessorService implements EventProcessor {
   private final InitEventRepository initEventRepository;
 
   private final ObjectMapper objectMapper;
