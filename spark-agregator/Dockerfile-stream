@@ -1,0 +1,7 @@
+FROM openjdk:8
+
+WORKDIR app
+
+COPY target/streaming-aggregator-jar-with-dependencies.jar  /app/
+
+CMD java -jar streaming-aggregator-jar-with-dependencies.jar

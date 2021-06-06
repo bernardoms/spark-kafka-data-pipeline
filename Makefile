@@ -1,17 +1,13 @@
-network:
-	docker network create spark-net
-
-spark:
-	docker-compose -f docker-compose-minimal.yml up -d
-
 down:
-	docker-compose -f docker-compose-minimal.yml down
-	docker-compose -f docker-compose-spark-app.yml down
-	docker network rm spark-net
+	docker-compose -f docker-compose.yml down
 
-spark-app:
-	docker-compose -f docker-compose.yml build --build-arg app
-	docker-compose -f docker-compose.yml up app
+batch-aggregator-spark-app:
+	docker-compose -f docker-compose.yml build batch-aggregator
+	docker-compose -f docker-compose.yml up batch-aggregator
+
+stream-aggregator-spark-app:
+	docker-compose -f docker-compose.yml build stream-aggregator
+	docker-compose -f docker-compose.yml up stream-aggregator
 
 kafka-consumer-producer-app:
 	docker-compose -f docker-compose.yml build event-producer-consumer

@@ -20,10 +20,15 @@
   
   After run that in the mongodb you will see the events saved
  
-* For aggregating the events you can run the spark using:
+* For batch aggregating the events you can run the spark using:
   `cd spark-aggregator`
   `mvn clean package`
-  `make spark-app`
+  `make batch-aggregator-spark-app`
+  
+* For stream aggregation the events you can run the spark using:
+  `cd spark-aggregator`
+  `mvn clean package`
+  `make stream-aggregator-spark-app`
   
   After run that in the mongodb you will see the aggregations saved in mongodb
  
@@ -31,4 +36,5 @@
 
 * it's still incomplete, missing the other aggregations and also unit tests for consumer/producers
 * The consumer and producer application is in the same application, but need to be divided in two different projects
-* Need some refactor for the code.
+* Need some refactor for the code.(Spark code has everything in the main)
+* Need create diagrams explaining the architecture with draw.io .

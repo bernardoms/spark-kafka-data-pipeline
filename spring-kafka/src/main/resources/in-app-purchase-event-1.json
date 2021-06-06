@@ -1,7 +1,30 @@
-[{
-  "event-type" : "in-app-purchase",
-  "time" : 1622472676,
-  "purchase_value" : 20,
-  "user-id" : "1",
-  "product-id" : "1234"
-}]
+[
+  {
+    "event-type": "in-app-purchase",
+    "time": 1622472676,
+    "purchase_value": 20,
+    "user-id": "1",
+    "product-id": "1234"
+  },
+  {
+    "event-type": "in-app-purchase",
+    "time": 1622472776,
+    "purchase_value": 20,
+    "user-id": "1",
+    "product-id": "1234"
+  },
+  {
+    "event-type": "in-app-purchase",
+    "time": 1622472679,
+    "purchase_value": 100,
+    "user-id": "1",
+    "product-id": "1234"
+  },
+  {
+    "event-type": "in-app-purchase",
+    "time": 1622472686,
+    "purchase_value": 220,
+    "user-id": "1",
+    "product-id": "1234"
+  }
+]

@@ -55,7 +55,16 @@ services:
         condition: service_healthy
     mem_limit: 512m
 
-  app:
-    build: ./spark-agregator
+  batch-aggregator:
+    build:
+      context: ./spark-agregator
+      dockerfile: Dockerfile-batch
+    depends_on:
+      - mongo
+
+  stream-aggregator:
+    build:
+      context: ./spark-agregator
+      dockerfile: Dockerfile-stream
     depends_on:
       - mongo

@@ -2,13 +2,8 @@ package com.bernardoms.miniclip;
 
 import static org.apache.spark.sql.functions.col;
 import static org.apache.spark.sql.functions.unix_timestamp;
-import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
-import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
-import com.bernardoms.miniclip.config.HackedMongoConnector;
 import com.bernardoms.miniclip.model.InitEvent;
-import com.mongodb.MongoClient;
-import com.mongodb.spark.MongoConnector;
 import com.mongodb.spark.MongoSpark;
 import com.mongodb.spark.config.ReadConfig;
 import com.mongodb.spark.config.WriteConfig;
@@ -20,9 +15,8 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
-import org.bson.codecs.pojo.PojoCodecProvider;
 
-public class SparkAggregator {
+public class SparkBatchAggregator {
   public static void main(final String[] args) {
 
     Map<String, String> readOverrides = new HashMap<>();
@@ -31,10 +25,6 @@ public class SparkAggregator {
         .put("uri", "mongodb://local:local@mongo:27017/local.init-event?authSource=admin&authMechanism=SCRAM-SHA-1");
 
     ReadConfig readConfig = ReadConfig.create(readOverrides);
-
-    MongoConnector mongoConnector = new HackedMongoConnector(readConfig,
-        fromRegistries(MongoClient.getDefaultCodecRegistry(),
-            fromProviders(PojoCodecProvider.builder().register(InitEvent.class).build())));
 
     SparkSession spark = SparkSession.builder()
         .master("local")
@@ -49,7 +39,6 @@ public class SparkAggregator {
 
     MongoSpark mongoSpark = MongoSpark.builder()
         .javaSparkContext(jsc)
-        .connector(mongoConnector)
         .readConfig(readConfig)
         .build();
 
